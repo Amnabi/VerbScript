@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- 
+
+
+-->
+
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_SimpleTest_Ga</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_RaceDef">
+					<raceDef>Human</raceDef>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_GiveHediff">
+					<hediff><hediffDef>BadBack</hediffDef></hediff>
+					<severity><number>1.0</number></severity>
+					<bodypart><bodyPartDef>Torso</bodyPartDef></bodypart>
+					<targetScope><sequence Class="VerbScript.VS_LocalTarget"></sequence></targetScope>
+				</li>
+			</sequence>
+		</fire>
+		<label>Example give hediff</label>
+		<description>gives bad back to another</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_SimpleTest_Na</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_RaceDef">
+					<raceDef>Human</raceDef>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_GiveHediff">
+					<hediff><hediffDef>BadBack</hediffDef></hediff>
+					<severity><number>0.4</number></severity>
+				</li>
+			</sequence>
+		</fire>
+		<label>Example give hediff self</label>
+		<description>gives bad back to self</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_SimpleTest_Da</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_RaceDef">
+					<raceDef>Human</raceDef>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SpawnDef">
+					<spawnPosition Class="VerbScript.VS_LocalTarget"></spawnPosition>
+					<spawnDef><thingDef>Wall</thingDef></spawnDef>
+					<stuffDef><thingDef>Gold</thingDef></stuffDef>
+				</li>
+			</sequence>
+		</fire>
+		<label>Spawn wall</label>
+		<description>spawns wall</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_SimpleTest_Ra</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_RaceDef">
+					<raceDef>Human</raceDef>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SetFaction">
+					<copyFactionFrom Class="VerbScript.VS_RootScope"></copyFactionFrom>
+					<setFactionOf Class="VerbScript.VE_SpawnDef">
+						<spawnPosition Class="VerbScript.VS_LocalTarget"></spawnPosition>
+						<spawnDef><thingDef>Monkey</thingDef></spawnDef>
+						<pawnkind><pawnKindDef>Monkey</pawnKindDef></pawnkind>
+					</setFactionOf>
+				</li>
+			</sequence>
+		</fire>
+		<label>Spawn monkey</label>
+		<description>spawns monkey of your faction</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_SimpleTest_Ma</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_RaceDef">
+					<raceDef>Human</raceDef>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SetFaction">
+					<copyFactionFrom Class="VerbScript.VS_LocalTarget"></copyFactionFrom>
+					<setFactionOf Class="VerbScript.VE_SpawnDef">
+						<spawnPosition Class="VerbScript.VS_LocalTarget"></spawnPosition>
+						<spawnDef><thingDef>Thrumbo</thingDef></spawnDef>
+						<pawnkind><pawnKindDef>Thrumbo</pawnKindDef></pawnkind>
+					</setFactionOf>
+				</li>
+			</sequence>
+		</fire>
+		<label>Spawn thrumbo diffrent faction</label>
+		<description>spawns thrumbo for a different faction</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_SimpleTest_Sa</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_RaceDef">
+					<raceDef>Human</raceDef>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_MentalState">
+					<mentalState Class="VerbScript.VE_MentalStateDef"><mentalStateDef>Manhunter</mentalStateDef></mentalState>
+					<target Class="VerbScript.VS_LocalTarget"></target>
+				</li>
+			</sequence>
+		</fire>
+		<label>Mental state manhunter</label>
+		<description>mental state manhunter</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_TestA</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_GroupableAON_AND">
+					<verbSequences>
+						<li Class="VerbScript.VS_RootScope">
+							<verbSequences>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Human</raceDef>
+								</li>
+								<li Class="VerbScript.VC_Gender">
+									<gender>Male</gender>
+								</li>
+								<li Class="VerbScript.VC_GroupableAON_NOT">
+									<verbSequence Class="VerbScript.VC_HasHediff">
+										<hediffDef>BadBack</hediffDef>
+									</verbSequence>
+								</li>
+							</verbSequences>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Subtract">
+							<A Class="VerbScript.VS_LocalTarget"></A>
+							<B Class="VerbScript.VS_RootScope"></B>
+						</sequence>
+					</variable>
+				</li>
+				
+				<li Class="VerbScript.VS_RootScope">
+					<verbSequences>
+						<li Class="VerbScript.VE_While">
+							<condition Class="VerbScript.VC_True"></condition>
+							<verbSequences>
+								<li Class="VerbScript.VE_CellDamage">
+									<spawnPosition Class="VerbScript.VE_Add">
+										<A Class="VerbScript.VS_RootScope"></A>
+										<B Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터</text></variableName></B>
+									</spawnPosition>
+									<damageType><damageDef>Bomb</damageDef></damageType>
+								</li>
+								<li Class="VerbScript.VE_Delay">
+									<delayTicks><number>3</number></delayTicks>
+								</li>
+								<li Class="VerbScript.VE_SaveVariableVector3">
+									<variableName><text>위치_대상지점_백터</text></variableName>
+									<variable>
+										<sequence Class="VerbScript.VE_Rotate">
+											<angle><number>10</number></angle>
+											<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터</text></variableName></sequence></vector>
+										</sequence>
+									</variable>
+								</li>
+							</verbSequences>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</fire>
+		<repeatVerb>false</repeatVerb>
+		<label>Scripted Verb</label>
+		<description>pew pew</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_TestB</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_GroupableAON_AND">
+					<verbSequences>
+						<li Class="VerbScript.VC_GroupableAON_OR">
+							<verbSequences>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Warg</raceDef>
+								</li>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Human</raceDef>
+								</li>
+							</verbSequences>
+						</li>
+						<li Class="VerbScript.VC_Gender">
+							<gender>Male</gender>
+						</li>
+						<li Class="VerbScript.VC_HasHediff">
+							<hediffDef>BadBack</hediffDef>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Subtract">
+							<A Class="VerbScript.VS_LocalTarget"></A>
+							<B Class="VerbScript.VS_RootScope"></B>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터방향</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Normalize">
+							<vector><variableNamed>위치_대상지점_백터</variableNamed></vector>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>오프셋시그마</text></variableName>
+					<variable><vector3>(0,0,0)</vector3></variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableFloat">
+					<variableName><text>카운터</text></variableName>
+					<variable><number>0</number></variable>
+				</li>
+				
+				<li Class="VerbScript.VE_While">
+					<condition Class="VerbScript.VC_Lesser">
+						<A><variableNamed>카운터</variableNamed></A>
+						<B><number>200</number></B>
+					</condition>
+					<verbSequences>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>30</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>15</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>0</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>-15</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>-30</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+						</li>
+						
+						<li Class="VerbScript.VE_Delay">
+							<delayTicks><number>4</number></delayTicks>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>오프셋시그마</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<A Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></A>
+									<B Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></B>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>위치_대상지점_백터방향</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Rotate">
+									<angle><number>12</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></sequence></vector>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableFloat">
+							<variableName><text>카운터</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<APrimitive><number>1</number></APrimitive>
+									<BPrimitive><variableNamed>카운터</variableNamed></BPrimitive>
+								</sequence>
+							</variable>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</fire>
+		<label>Scripted Verb 2</label>
+		<description>pew pew 2</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_TestC</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_GroupableAON_AND">
+					<verbSequences>
+						<li Class="VerbScript.VC_GroupableAON_OR">
+							<verbSequences>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Warg</raceDef>
+								</li>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Human</raceDef>
+								</li>
+							</verbSequences>
+						</li>
+						<li Class="VerbScript.VC_Gender">
+							<gender>Male</gender>
+						</li>
+						<li Class="VerbScript.VC_HasHediff">
+							<hediffDef>BadBack</hediffDef>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Subtract">
+							<A Class="VerbScript.VS_LocalTarget"></A>
+							<B Class="VerbScript.VS_RootScope"></B>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터방향</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Normalize">
+							<vector><variableNamed>위치_대상지점_백터</variableNamed></vector>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>오프셋시그마</text></variableName>
+					<variable><vector3>(0,0,0)</vector3></variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableFloat">
+					<variableName><text>카운터</text></variableName>
+					<variable><number>0</number></variable>
+				</li>
+				<li Class="VerbScript.VE_While">
+					<condition Class="VerbScript.VC_Lesser">
+						<A><variableNamed>카운터</variableNamed></A>
+						<B><number>200</number></B>
+					</condition>
+					<verbSequences>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>0</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Bomb</damageDef></damageType>
+							<radius><number>2</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>60</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>-60</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>180</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						
+						<li Class="VerbScript.VE_Delay">
+							<delayTicks><number>1</number></delayTicks>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>오프셋시그마</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<A Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></A>
+									<B Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></B>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>위치_대상지점_백터방향</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Rotate">
+									<angle><number>3</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></sequence></vector>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableFloat">
+							<variableName><text>카운터</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<APrimitive><number>1</number></APrimitive>
+									<BPrimitive><variableNamed>카운터</variableNamed></BPrimitive>
+								</sequence>
+							</variable>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</fire>
+		<label>Scripted Verb 3</label>
+		<description>pew pew 3</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_TestD</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_GroupableAON_AND">
+					<verbSequences>
+						<li Class="VerbScript.VC_GroupableAON_OR">
+							<verbSequences>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Warg</raceDef>
+								</li>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Human</raceDef>
+								</li>
+							</verbSequences>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Subtract">
+							<A Class="VerbScript.VS_LocalTarget"></A>
+							<B Class="VerbScript.VS_RootScope"></B>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터방향</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Normalize">
+							<vector><variableNamed>위치_대상지점_백터</variableNamed></vector>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>오프셋시그마</text></variableName>
+					<variable><vector3>(0,0,0)</vector3></variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableFloat">
+					<variableName><text>카운터</text></variableName>
+					<variable><number>0</number></variable>
+				</li>
+				<li Class="VerbScript.VE_While">
+					<condition Class="VerbScript.VC_Lesser">
+						<A><variableNamed>카운터</variableNamed></A>
+						<B><number>200</number></B>
+					</condition>
+					<verbSequences>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>0</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Bomb</damageDef></damageType>
+							<radius><number>2</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>60</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>-60</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>180</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						
+						<li Class="VerbScript.VE_Delay">
+							<delayTicks><number>1</number></delayTicks>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>오프셋시그마</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<A Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></A>
+									<B Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></B>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>위치_대상지점_백터방향</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Cosine">
+											<angle>
+												<sequence Class="VerbScript.VE_Multiply">
+													<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+													<BPrimitive><number>8</number></BPrimitive>
+												</sequence>
+											</angle>
+										</sequence>
+									</angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></sequence></vector>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableFloat">
+							<variableName><text>카운터</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<APrimitive><number>1</number></APrimitive>
+									<BPrimitive><variableNamed>카운터</variableNamed></BPrimitive>
+								</sequence>
+							</variable>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</fire>
+		<label>Scripted Verb 3</label>
+		<description>pew pew 3</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+  
+  <VerbScript.VerbScriptDef>
+    <defName>VSC_TestD</defName>
+	<verbData>
+		<potential>
+			<sequence>
+				<li Class="VerbScript.VC_GroupableAON_AND">
+					<verbSequences>
+						<li Class="VerbScript.VC_GroupableAON_OR">
+							<verbSequences>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Warg</raceDef>
+								</li>
+								<li Class="VerbScript.VC_RaceDef">
+									<raceDef>Human</raceDef>
+								</li>
+							</verbSequences>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</potential>
+		<allow>
+		</allow>
+		<init>
+		</init>
+		<aimTick>
+		</aimTick>
+		<fire>
+			<sequence>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Subtract">
+							<A Class="VerbScript.VS_LocalTarget"></A>
+							<B Class="VerbScript.VS_RootScope"></B>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>위치_대상지점_백터방향</text></variableName>
+					<variable>
+						<sequence Class="VerbScript.VE_Normalize">
+							<vector><variableNamed>위치_대상지점_백터</variableNamed></vector>
+						</sequence>
+					</variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableVector3">
+					<variableName><text>오프셋시그마</text></variableName>
+					<variable><vector3>(0,0,0)</vector3></variable>
+				</li>
+				<li Class="VerbScript.VE_SaveVariableFloat">
+					<variableName><text>카운터</text></variableName>
+					<variable><number>0</number></variable>
+				</li>
+				<li Class="VerbScript.VE_While">
+					<condition Class="VerbScript.VC_Lesser">
+						<A><variableNamed>카운터</variableNamed></A>
+						<B><number>200</number></B>
+					</condition>
+					<verbSequences>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle><number>0</number></angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></sequence></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+							</spawnPosition>
+							<damageType><damageDef>Bomb</damageDef></damageType>
+							<radius><number>2</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>60</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>-60</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						<li Class="VerbScript.VE_CellDamage">
+							<spawnPosition Class="VerbScript.VE_Add">
+								<A Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Add">
+											<A Class="VerbScript.VE_Multiply">
+												<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+												<BPrimitive><number>10</number></BPrimitive>
+											</A>
+											<BPrimitive>
+												<number>180</number>
+											</BPrimitive>
+										</sequence>
+									</angle>
+									<vector><vector3>(0,0,10)</vector3></vector>
+								</A>
+								<B Class="VerbScript.VS_RootScope"></B>
+								<BPrimitive><variableNamed>오프셋시그마</variableNamed></BPrimitive>
+							</spawnPosition>
+							<damageType><damageDef>Smoke</damageDef></damageType>
+							<radius><number>3</number></radius>
+						</li>
+						
+						<li Class="VerbScript.VE_Delay">
+							<delayTicks><number>1</number></delayTicks>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>오프셋시그마</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<A Class="VerbScript.VS_LoadVariable"><variableName><text>오프셋시그마</text></variableName></A>
+									<B Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></B>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableVector3">
+							<variableName><text>위치_대상지점_백터방향</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Rotate">
+									<angle>
+										<sequence Class="VerbScript.VE_Cosine">
+											<angle>
+												<sequence Class="VerbScript.VE_Multiply">
+													<APrimitive><variableNamed>카운터</variableNamed></APrimitive>
+													<BPrimitive><number>8</number></BPrimitive>
+												</sequence>
+											</angle>
+										</sequence>
+									</angle>
+									<vector><sequence Class="VerbScript.VS_LoadVariable"><variableName><text>위치_대상지점_백터방향</text></variableName></sequence></vector>
+								</sequence>
+							</variable>
+						</li>
+						<li Class="VerbScript.VE_SaveVariableFloat">
+							<variableName><text>카운터</text></variableName>
+							<variable>
+								<sequence Class="VerbScript.VE_Add">
+									<APrimitive><number>1</number></APrimitive>
+									<BPrimitive><variableNamed>카운터</variableNamed></BPrimitive>
+								</sequence>
+							</variable>
+						</li>
+					</verbSequences>
+				</li>
+			</sequence>
+		</fire>
+		<label>Scripted Verb 4</label>
+		<description>pew pew 3</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+
+</Defs>

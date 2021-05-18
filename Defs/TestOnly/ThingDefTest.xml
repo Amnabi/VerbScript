@@ -1,32 +1,3 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="BuildingBase">
-    <defName>ScriptExecutorTest_A</defName>
-    <label>SCEXT_A</label>
-    <description>You should not see this.</description>
-    <graphicData>
-      <texPath>EmptyTex</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <selectable>false</selectable>
-    <building>
-      <isInert>true</isInert>
-      <isEdifice>false</isEdifice>
-      <deconstructible>false</deconstructible>
-    </building>
-	<tickerType>Normal</tickerType>
-	<comps>
-		<li Class="VerbScript.CompProperties_ScriptExecutor">
-			<verbScript>
-				<sequence>
-					<li Class="VerbScript.VE_SpawnDef">
-						<spawnPosition Class="VerbScript.VS_TopScope"></spawnPosition>
-						<spawnDef><thingDef>Wall</thingDef></spawnDef>
-						<stuffDef><thingDef>Gold</thingDef></stuffDef>
-					</li>
-				</sequence>
-			</verbScript>
-		</li>
-	</comps>
-  </ThingDef>
 </Defs>

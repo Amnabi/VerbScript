@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--## Section 1 Basic Parameters
+	##Unlike verbs defined in weapons, hediffs or in race defs, scripted verbs should be defined as a seperate def.
+	##Within the VerbScript.VerbScriptDef, there are fields where you can specify which pawns should have the scripted verb.
+	
+  <VerbScript.VerbScriptDef>
+    <defName>VS_CallRaid</defName> 
+	<verbData>
+		##Potential, decides whether the gizmo should appear for the pawn
+		##See Section 2
+		<potential>
+			<hasTrait>Bloodlust, 0</hasTrait>
+		</potential>
+		##TODO
+		<allow>
+		</allow>
+		##TODO
+		<init>
+		</init>
+		##TODO
+		<allowTarget>
+		</allowTarget>
+		
+		##Whether the AI will use it or not
+		<aiEnabled>false</aiEnabled>
+		##Valid targets for the AI. Defaults to hostile pawns if not specified
+		<ai_activeTargets>
+			<hostilepawnsinmap></hostilepawnsinmap>
+		</ai_activeTargets>
+		##Target priority for the AI. AI will select this pawn with highest score. If the score is 0 or less, AI will ignore that pawn.
+		<ai_targetPoints>
+			<if>
+				<inMentalState/>
+				<num>-1</num>
+			</if>
+			<else>
+				<num>1</num>
+			</else>
+		</ai_targetPoints>
+		##Target mode, mode_ignore = AI will ignore, mode_fire = AI will only attack pawns in range, mode_chase = AI will chase after pawns even if
+		##outside their fire range
+		<ai_targetMode>
+			<mode_fire/>
+		</ai_targetMode>
+		
+		##Upon firing, the script below will execute.
+		##See Section 3
+		<fire>
+			<incident>
+				<incidentDef>RaidEnemy</incidentDef>
+				<points>1200</points>
+			</incident>
+		</fire>
+		##
+		##Decides whether the pawn should repeat the verb after usage.
+		<repeatVerb>false</repeatVerb>
+		##Cooldown until this verb can be used again
+		<cooldownTicks>6000</cooldownTicks>
+		##Label of the gizmo
+		<label>Call Raid (1200)</label>
+		##Description of the gizmo
+		<description>A bloodlusty pawn calls a raid!</description>
+		##Icon of the gizmo
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		##verbProps. works like the regular verbProps in vanilla
+		<verbProps>
+			##Class of the verb, only VerbScript.Verb_Scripted has been tested so far
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+
+	##Section 2 Conditions
+		##Section 2.1 Alias
+		Some Conitions and effects have aliases. It means they can be written with a different name, but work the same
+		Ex <hasCurJobDef>Wait</hasCurJobDef> and <hasCurJob>Wait</hasCurJob> will work the same.
+	List of conditions
+	
+	hasCurJobDef
+	alias: [hasCurJob]
+	Checks whether the pawn currently has the specified job def
+	example: <hasCurJobDef>Wait</hasCurJobDef>, <hasCurJob>Wait</hasCurJob>
+	
+	hasHediff
+	alias: none
+	Checks whether the pawn currently has the specified hediff def
+	example: <hasHediff>BadBack</hasHediff>
+
+	hasTrait
+	alias: none
+	Checks whether the pawn currently has the specified trait def
+	example: <hasTrait>Psychopath, 0</hasTrait>, <hasTrait>Psychopath</hasTrait>
+
+	isDrafted
+	alias: [drafted]
+	Checks whether the pawn is currently in the drafted state
+	example: <isDrafted>true</isDrafted>, <isDrafted>false</isDrafted>, <isDrafted/> (defaults to <isDrafted>true</isDrafted>)
+
+	isMoving
+	alias: [moving]
+	Checks whether the pawn is moving
+	example: <isMoving>true</isMoving>, <isMoving/> (defaults to <isMoving>true</isMoving>)
+
+	isDef
+	alias: [isRace, isRaceDef, isThingDef]
+	Checks whether the thing has a matching def
+	example: <isDef>Human</isDef>
+
+	isGender
+	alias: [isSex]
+	Checks whether the pawn has the matching gender
+	example: <isGender>Male</isGender>, <isGender>Female</isGender>
+
+	and
+	alias: none
+	All conditions must match
+	example: 
+		<and>
+			<isDef>Human</isDef>
+			<hasHediff>BadBack</hasHediff>
+			<hasTrait>Psychopath</hasTrait>
+		</and>
+
+	or
+	alias: none
+	At least one condition must match
+	example: 
+		<or>
+			<isDef>Human</isDef>
+			<hasHediff>BadBack</hasHediff>
+			<hasTrait>Psychopath</hasTrait>
+		</or>
+	
+	not
+	alias: none
+	Condition must not match
+	example: 
+		<not>
+			<hasTrait>Dementia</hasTrait>
+		</not>
+	
+	true
+	alias: [yes]
+	Returns true
+	example: <true/>
+	
+	false
+	alias: [no]
+	Returns false
+	example: <false/>
+	
+	equal
+	alias: [equals]
+	Checks if all the parameters are the same
+	example: 
+		<equal>
+			<num>1</num>
+			<load>Counter</load>
+		</equal>,
+		
+		<equal>
+			<num>1</num>
+			<load>Counter1</load>
+			<load>Counter2</load>
+			<load>Counter3</load>
+			<load>Counter4</load>
+		</equal>
+	
+	lesser
+	alias: [less]
+	Works simularly with equal. <
+	
+	lesserEqual
+	alias: [lessEqual]
+	Works simularly with equal. <=
+	
+	greater
+	alias: [great]
+	Works simularly with equal. >
+	
+	greaterEqual
+	alias: [greatEqual]
+	Works simularly with equal. >=
+	
+	##Section 3
+	delay
+	alias: [wait, delayTicks, waitTicks]
+	Stops the script for N ticks
+	example: <delay>10</delay>
+	
+	spawndef
+	alias: [spawn]
+	Spawns a thing with def in a given position
+	example: WARNING: Order of some of the elements matters
+		##Case : Pawn
+		<spawndef>
+			<aimtarget/> ##[LoadOrder 1] positon to spawn at
+			<spawnDef>Alpaca</spawnDef> ## def to spawn
+			<pawnkind>Alpaca</pawnkind> ## pawn kind
+		</spawndef>
+		##Case : Stuffed Thing
+		<spawndef>
+			<aimtarget/> ##[LoadOrder 1] positon to spawn at
+			<spawnDef>Wall</spawnDef> ## def to spawn
+			<stuffDef>Gold</stuffDef> ##stuff
+		</spawndef>
+		##Case : Mote
+		<spawndef>
+			<aimtarget/> ##[LoadOrder 1] positon to spawn at
+			<spawnDef>Mote_PlainFlash</spawnDef> ## def to spawn
+			<scale>4</scale> ##Scale of mote
+		</spawndef>
+		
+	explode
+	alias: [celldamage]
+	Creates an explosion in the given position
+	example: WARNING: Order of some of the elements matters
+		<explode>
+			<damageDef>EMP</damageDef> ##[LoadOrder 1] damage type
+			<aimtarget/> ##[LoadOrder 2] position
+			<doCameraShake>false</doCameraShake>
+			<radius>5</radius>
+		</explode>
+		
+	giveHediff
+	alias: [applyHediff]
+	Creates an explosion in the given position
+	example: WARNING: Order of some of the elements matters
+		<applyHediff>
+			<hediffDef>Dementia</hediffDef> ##[LoadOrder 1] hediff def
+			<bodypart>Torso</bodypart> ##[Optional]
+			<targetScope><aimTarget/></targetScope>
+			<adjustExisting>true</adjustExisting> create new hediff vs adjust existing
+		</applyHediff>
+		
+	comptrigger
+	alias: [compactivate]
+	Triggers a comp
+	example:
+		<compactivate>
+			<activatorScope><rootscope/></activatorScope> ##[LoadOrder 1] activator
+			<targetScope><aimtarget/></targetScope> ##[LoadOrder 2] target
+			<comps> ##comps
+			  <li>
+				<compClass>CompTargetEffect_Manhunter</compClass>
+			  </li>
+			  <li Class="CompProperties_TargetEffect_GoodwillImpact">
+				<goodwillImpact>-200</goodwillImpact>
+			  </li>
+			</comps>
+		</compactivate>
+		
+		
+	-->
+
+
+</Defs>

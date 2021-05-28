@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <VerbScript.VerbScriptDef>
+    <defName>VS_Heal</defName>
+	<verbData>
+		<potential>
+			<isRace>Human</isRace>
+		</potential>
+		<allow>
+		</allow>
+		<fire>
+			<foreach>
+				<filter>
+					<getField>def.isBad</getField>
+					<aimTarget><allHediffs/></aimTarget>
+				</filter>
+				<do>
+					<setField>
+						<field>Severity</field>
+						<max>
+							<add>
+								<num>-0.1</num>
+								<getField>Severity</getField>
+							</add>
+							<num>0</num>
+						</max>
+					</setField>
+				</do>
+			</foreach>
+		</fire>
+		<repeatVerb>false</repeatVerb>
+		<cooldownTicks>50</cooldownTicks>
+		<label>Heal</label>
+		<description>Removes all negative hediffs</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+</Defs>

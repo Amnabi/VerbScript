@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <VerbScript.VerbScriptDef>
+    <defName>VS_CallRaid</defName>
+	<verbData>
+		<potential>
+			<hasTrait>Bloodlust, 0</hasTrait>
+		</potential>
+		<fire>
+			<incident>
+				<incidentDef>RaidEnemy</incidentDef>
+				<points>1200</points>
+			</incident>
+		</fire>
+		<noTarget>true</noTarget>
+		<repeatVerb>false</repeatVerb>
+		<cooldownTicks>6000</cooldownTicks>
+		<label>Call Raid (1200)</label>
+		<description>A bloodlusty pawn calls a raid!</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+</Defs>

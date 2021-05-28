@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <VerbScript.VerbScriptDef>
+    <defName>VS_Lullaby</defName>
+	<verbData>
+		<potential>
+			<isRace>Human</isRace>
+		</potential>
+		<allow>
+		</allow>
+		<fire>
+			<foreach>
+				<filter>
+					<isType>Pawn</isType>
+					<thingsinradius>
+						<aimtarget/>
+						<radius>5</radius>
+						<requiresLineOfSight>true</requiresLineOfSight>
+					</thingsinradius>
+				</filter>
+				<do>
+					<givehediff>
+						<hediffDef>Anesthetic</hediffDef>
+						<severity>1.0</severity>
+						<adjustExisting>true</adjustExisting>
+					</givehediff>
+				</do>
+			</foreach>
+		</fire>
+		<cellHighlight>
+			<cellsinradius>
+				<aimtarget/>
+				<radius>5</radius>
+				<requiresLineOfSight>true</requiresLineOfSight>
+			</cellsinradius>
+		</cellHighlight>
+		<repeatVerb>false</repeatVerb>
+		<cooldownTicks>50</cooldownTicks>
+		<label>Lullaby</label>
+		<description>Go to sleep</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+</Defs>

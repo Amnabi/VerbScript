@@ -12,13 +12,16 @@
 		<potential>
 			<hasTrait>Bloodlust, 0</hasTrait>
 		</potential>
-		##TODO
+		##Checks whether the pawn can use the verb. Unlike "potential", it will still show the gizmo, but will gray out if unavailable
 		<allow>
 		</allow>
-		##TODO
+		##Script to execute when starting to aim
 		<init>
 		</init>
-		##TODO
+		##Script to execute when verb is cancelled
+		<cancel>
+		</cancel>
+		##Filters out which targets are valid or  not
 		<allowTarget>
 		</allowTarget>
 		

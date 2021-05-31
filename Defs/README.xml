@@ -15,18 +15,12 @@
 		##Checks whether the pawn can use the verb. Unlike "potential", it will still show the gizmo, but will gray out if unavailable
 		<allow>
 		</allow>
-		##Script to execute when starting to aim
-		<init>
-		</init>
-		##Script to execute when verb is cancelled
-		<cancel>
-		</cancel>
 		##Filters out which targets are valid or  not
 		<allowTarget>
 		</allowTarget>
-		
-		##Whether the AI will use it or not
-		<aiEnabled>false</aiEnabled>
+		##Cells to highlight (Like the radius effect you see in explosives)
+		<cellHighlight>
+		</cellHighlight>
 		##Valid targets for the AI. Defaults to hostile pawns if not specified
 		<ai_activeTargets>
 			<hostilepawnsinmap></hostilepawnsinmap>
@@ -55,7 +49,17 @@
 				<points>1200</points>
 			</incident>
 		</fire>
-		##
+		##Script to execute when starting to aim
+		<init>
+		</init>
+		##Script to execute when verb is cancelled
+		<cancel>
+		</cancel>
+		
+		##Whether the AI will use it or not
+		<aiEnabled>false</aiEnabled>
+		##Whether being incapable of violence should disable the gizmo or not
+		<isViolent>false</isViolent>
 		##Decides whether the pawn should repeat the verb after usage.
 		<repeatVerb>false</repeatVerb>
 		##Cooldown until this verb can be used again

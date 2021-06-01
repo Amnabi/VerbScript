@@ -250,6 +250,36 @@
 			<adjustExisting>true</adjustExisting> create new hediff vs adjust existing
 		</applyHediff>
 		
+	addTrait
+	alias: [none]
+	Gives a trait to target
+	example:
+		<addTrait>
+			<traitDef>Psychopath</traitDef>
+			<degree>0</degree>
+			<targetScope><aimTarget/></targetScope>
+			<overrideConflictingTraits>true</overrideConflictingTraits> removes any conflicting traits beforehand
+		</addTrait>
+		
+	removeTrait
+	alias: [none]
+	Removes a trait from the target
+	example:
+		<removeTrait>
+			<traitDef>Psychopath</traitDef>
+			<degree>0</degree>
+			<targetScope><aimTarget/></targetScope>
+		</removeTrait>
+		
+	teleport
+	alias: [none]
+	Teleports a target
+	example:
+		<teleport>
+			<aimTarget/> teleport this
+			<rootScope/> to here
+		</teleport>
+		
 	comptrigger
 	alias: [compactivate]
 	Triggers a comp

@@ -280,6 +280,14 @@
 			<rootScope/> to here
 		</teleport>
 		
+	lightning
+	alias: [none]
+	Summons a lightning on the target
+	example:
+		<lightning>
+			<aimTarget/> summon lightning here
+		</lightning>
+		
 	comptrigger
 	alias: [compactivate]
 	Triggers a comp

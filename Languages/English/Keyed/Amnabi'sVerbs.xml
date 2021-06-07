@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<VerbScript.Reason.CantControl>Fail Reason: Not controlled by the player.</VerbScript.Reason.CantControl>
+	<VerbScript.Reason.NotDrafted>Fail Reason: Not drafted.</VerbScript.Reason.NotDrafted>
+	<VerbScript.Reason.NotAllowed>Fail Reason: Condition not valid.</VerbScript.Reason.NotAllowed>
+	<VerbScript.Reason.Downed>Fail Reason: Downed.</VerbScript.Reason.Downed>
+	<VerbScript.Reason.IncapableOfViolence>Fail Reason: Incapable of violence.</VerbScript.Reason.IncapableOfViolence>
+	<VerbScript.Reason.Cooldown>Fail Reason: Not ready.</VerbScript.Reason.Cooldown>
+</LanguageData>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <VerbScript.VerbScriptDef>
+    <defName>VS_Fire</defName>
+	<verbData>
+		<potential>
+			<isRace>Human</isRace>
+		</potential>
+		<fire>
+		</fire>
+		<repeatVerb>false</repeatVerb>
+		<cooldownTicks>50</cooldownTicks>
+		<label>Pewpew</label>
+		<description>Fire without a gun.</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_Revolver</defaultProjectile>
+			<warmupTime>0.3</warmupTime>
+			<range>25.9</range>
+			<soundCast>Shot_Revolver</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+</Defs>

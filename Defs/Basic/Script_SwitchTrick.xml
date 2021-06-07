@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <VerbScript.VerbScriptDef>
-    <defName>VS_Lullaby</defName>
+    <defName>VS_SwitchTrick</defName>
 	<verbData>
 		<potential>
 			<isRace>Human</isRace>
-			<hasEquipment>Gun_Revolver</hasEquipment>
 		</potential>
-		<allow>
-		</allow>
 		<fire>
-			<foreach>
-				<filter>
-					<isType>Pawn</isType>
-					<thingsinradius>
-						<aimtarget/>
-						<radius>5</radius>
-						<requiresLineOfSight>true</requiresLineOfSight>
-					</thingsinradius>
-				</filter>
-				<do>
-					<givehediff>
-						<hediffDef>Anesthetic</hediffDef>
-						<severity>1.0</severity>
-						<adjustExisting>true</adjustExisting>
-					</givehediff>
-				</do>
-			</foreach>
+			<teleport>
+				<aimTarget/>
+				<extraAimTarget>0</extraAimTarget>
+			</teleport>
 		</fire>
-		<cellHighlight>
-			<cellsinradius>
-				<aimtarget/>
-				<radius>5</radius>
-				<requiresLineOfSight>true</requiresLineOfSight>
-			</cellsinradius>
-		</cellHighlight>
+		<allowTarget>
+			<isType>Pawn</isType>
+		</allowTarget>
+		<extraTarget>
+			<li>
+				<allowTarget><true/></allowTarget>
+			</li>
+		</extraTarget>
+		
 		<repeatVerb>false</repeatVerb>
 		<cooldownTicks>50</cooldownTicks>
-		<label>Lullaby</label>
-		<description>Go to sleep</description>
+		<label>Switch</label>
+		<description>switch</description>
 		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
 		<verbProps>
 			<verbClass>VerbScript.Verb_Scripted</verbClass>

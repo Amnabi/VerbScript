@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <VerbScript.VerbScriptDef>
+    <defName>Train</defName>
+	<verbData>
+		<potential>
+			<isRace>Human</isRace>
+		</potential>
+		<fire>
+			<train>
+				<trainable>Obedience</trainable>
+				<stages>1</stages>
+				<targetScope><aimTarget/></targetScope>
+				<trainerScope><rootScope/></trainerScope>
+			</train>
+		</fire>
+		<allowTarget>
+			<isAnimal/>
+		</allowTarget>
+		
+		<repeatVerb>false</repeatVerb>
+		<cooldownTicks>50</cooldownTicks>
+		<label>Train</label>
+		<description>train</description>
+		<icon>Things/Item/Equipment/WeaponRanged/MachinePistol</icon>
+		<verbProps>
+			<verbClass>VerbScript.Verb_Scripted</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<soundCast>Shot_MachinePistol</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProps>
+	</verbData>
+  </VerbScript.VerbScriptDef>
+</Defs>

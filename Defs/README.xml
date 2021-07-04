@@ -64,6 +64,8 @@
 		<repeatVerb>false</repeatVerb>
 		##Cooldown until this verb can be used again
 		<cooldownTicks>6000</cooldownTicks>
+		##Initial cooldown ticks when verb gained
+		<initialCooldownTicks>6000</initialCooldownTicks>
 		##Label of the gizmo
 		<label>Call Raid (1200)</label>
 		##Description of the gizmo
